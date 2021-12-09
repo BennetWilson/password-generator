@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 var lowercase = ["abcdefghijklmnopqrstuvwxyz"];
 var numbers = ["1234567890"];
 var uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var spcl = ["~!@#$%^&*()_+="];
+var spcl = ["~!@#$%^&*()_+=-"];
 var result = [];
 
 // Write password to the #password input
@@ -49,7 +49,8 @@ function generatePassword() {
   } else if (special === false) {
     result;
   }
-  // Math logic so it actually spits out a password. also dont think the for loop does anything
+  // Math logic so it actually spits out a password. 
+  // also, I don't think the for loop does anything
   let writePassword = "";
   for (let i = 0; i < passwordLength; i++) {
     writePassword += result[Math.floor(Math.random() * result.length)];
@@ -59,7 +60,7 @@ function generatePassword() {
 
   let showPassword = confirm(writePassword);
 
-  // This code breaks the program somehow but I haven't figured out how so I don't want to delete it
+  // This code breaks the program somehow but I haven't figured out how so I don't want to delete it yet
 
   // return writePassword;
   // function writePassword() {
