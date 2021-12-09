@@ -1,95 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-let lowercase = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-let numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-let uppercase = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
-let spcl = [
-  "~",
-  "!",
-  "@",
-  "#",
-  "%",
-  "^",
-  "&",
-  "*",
-  "(",
-  ")",
-  "+",
-  "=",
-  "-",
-  "?",
-  "<",
-  ">",
-  "'",
-  "*",
-  "/",
-  ";",
-  ".",
-  "`",
-  "-",
-  "+",
-  "{",
-  "[",
-  "]",
-  "}",
-  "|",
-  ":",
-];
-let result = [];
+// Ugly arrays. Having them separated with quotes and commas caused issues with the password generator.
+var lowercase = ["abcdefghijklmnopqrstuvwxyz"];
+var numbers = ["1234567890"];
+var uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var spcl = ["~!@#$%^&*()_+="];
+var result = [];
 
 // Write password to the #password input
 generateBtn.addEventListener("click", generatePassword);
