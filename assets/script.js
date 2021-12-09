@@ -78,7 +78,6 @@ let spcl = [
   "*",
   "/",
   ";",
-  ",",
   ".",
   "`",
   "-",
@@ -88,7 +87,7 @@ let spcl = [
   "]",
   "}",
   "|",
-  ":"
+  ":",
 ];
 let result = [];
 
@@ -97,9 +96,11 @@ generateBtn.addEventListener("click", generatePassword);
 function generatePassword() {
   // Password length prompt
   let passwordLength = prompt("Please enter between 8 and 128 characters");
-  
+
   if (!passwordLength || passwordLength < 8 || passwordLength > 128) {
-    window.alert( "Invalid length.Please ensure you password is between 8 and 128 characters");
+    window.alert(
+      "Invalid length.Please ensure you password is between 8 and 128 characters"
+    );
     generatePassword();
   }
   // Lowercase prompt
@@ -114,43 +115,39 @@ function generatePassword() {
   if (upper === true) {
     result += uppercase;
   } else if (upper === false) {
-  result;
+    result;
   }
   // Numbers prompt
   let num = confirm("Would you like to add numbers?");
   if (num === true) {
     result += numbers;
   } else if (num === false) {
-  result;
+    result;
   }
   // Special characters prompt
-  let special = confirm("Would you like to use special characters? (!,#,$,@,%..)");
+  let special = confirm(
+    "Would you like to use special characters? (!,#,$,@,%..)"
+  );
   if (special === true) {
     result += spcl;
   } else if (special === false) {
-  result;
-  // let easy = confirm ()
+    result;
   }
-  // Math logic so it actually spits out a password maybe?
+  // Math logic so it actually spits out a password. also dont think the for loop does anything
   let writePassword = "";
   for (let i = 0; i < passwordLength; i++) {
     writePassword += result[Math.floor(Math.random() * result.length)];
     console.log(Math.floor(Math.random() * result.length));
     console.log(writePassword);
   }
-  
-  let showPassword = confirm (writePassword)
 
+  let showPassword = confirm(writePassword);
 
-
-
-
-
-
+  // This code breaks the program somehow but I haven't figured out how so I don't want to delete it
 
   // return writePassword;
-  // function showPassword() {
-  //   var password = showPassword();
+  // function writePassword() {
+  //   var password = generatePassword();
   //   var passwordText = document.querySelector("#password");
   //   return;
   //   passwordText.value = password;
