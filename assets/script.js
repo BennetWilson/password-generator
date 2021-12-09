@@ -74,43 +74,63 @@ let spcl = [
   "?",
   "<",
   ">",
+  "'",
+  "*",
+  "/",
+  ";",
+  ",",
+  ".",
+  "`",
+  "-",
+  "+",
+  "{",
+  "[",
+  "]",
+  "}",
+  "|",
+  ":"
 ];
 let result = [];
 
 // Write password to the #password input
 generateBtn.addEventListener("click", generatePassword);
 function generatePassword() {
-  // length box
+  // Password length prompt
   let passwordLength = prompt("Please enter between 8 and 128 characters");
-
-  if (!passwordLength || passwordLength < 8 || passwordLength > 128)
-    return "Invalid length. Please ensure you password is between 8 and 128 characters";
-
+  
+  if (!passwordLength || passwordLength < 8 || passwordLength > 128) {
+    window.alert( "Invalid length.Please ensure you password is between 8 and 128 characters");
+    generatePassword();
+  }
   // Lowercase prompt
   let lower = confirm("Would you like to add lowercase characters?");
   if (lower === true) {
     result += lowercase;
+  } else if (lower === false) {
+    result;
   }
-
-  // uppercase prompt
+  // Uppercase prompt
   let upper = confirm("Would you like to add uppercase characters?");
   if (upper === true) {
     result += uppercase;
+  } else if (upper === false) {
+  result;
   }
-
-  // Numbers box
+  // Numbers prompt
   let num = confirm("Would you like to add numbers?");
   if (num === true) {
     result += numbers;
+  } else if (num === false) {
+  result;
   }
-
-  // special prompt
+  // Special characters prompt
   let special = confirm("Would you like to use special characters? (!,#,$,@,%..)");
   if (special === true) {
     result += spcl;
-  }
+  } else if (special === false) {
+  result;
   // let easy = confirm ()
-
+  }
   // Math logic so it actually spits out a password maybe?
   let writePassword = "";
   for (let i = 0; i < passwordLength; i++) {
@@ -121,7 +141,14 @@ function generatePassword() {
   
   let showPassword = confirm (writePassword)
 
-  // // return writePassword;
+
+
+
+
+
+
+
+  // return writePassword;
   // function showPassword() {
   //   var password = showPassword();
   //   var passwordText = document.querySelector("#password");
@@ -129,6 +156,6 @@ function generatePassword() {
   //   passwordText.value = password;
   // }
 
-  // // Add event listener to generate button
+  // Add event listener to generate button
   // generateBtn.addEventListener("click", showPassword);
 }
