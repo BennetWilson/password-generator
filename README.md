@@ -18,6 +18,9 @@ I used "let XYZvariable = confirm" to give a popup window for the user to make a
 At the bottom of the function i used a for statement to do some math and come up with the password.
 
 === Links ===
-
+[a link](https://github.com/BennetWilson/03-homework)
+[a link](https://bennetwilson.github.io/03-homework/)
 
 === Screen Shots ===
+![alt text](assets\capture1.PNG)
+![alt text](assets\capture-inspect.PNG)
