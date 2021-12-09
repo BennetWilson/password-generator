@@ -24,3 +24,7 @@ At the bottom of the function i used a for statement to do some math and come up
 === Screen Shots ===
 ![alt text](assets\capture1.PNG)
 ![alt text](assets\capture-inspect.PNG)
+
+=== who i worked with ===
+Taylor Garrey and Emily Burger and I worked in a zoom call together while doing our homework.
+I also used countless online resources to figure out how to make my code run.

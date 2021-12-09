@@ -1,10 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 // Ugly arrays. Having them separated with quotes and commas caused issues with the password generator.
+
+// var lowercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var lowercase = ["abcdefghijklmnopqrstuvwxyz"];
+// var numbers = ["1","2","3","4","5","6","7","8","9","0"];
 var numbers = ["1234567890"];
-var uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var spcl = ["~!@#$%^&*()_+=-"];
+// var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var uppercase = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+// var spcl = ["~","!","@","#","$","%","^","&","*","(",")","_","+","=","-"];
+var spcl = ["~!@#$%^&*()_+-="]
 var result = [];
 
 // Write password to the #password input
@@ -22,7 +27,9 @@ function generatePassword() {
   // Lowercase prompt
   let lower = confirm("Would you like to add lowercase characters?");
   if (lower === true) {
+    // result += lowercase[4];
     result += lowercase;
+    console.log("result at lowercase: " + result)
   } else if (lower === false) {
     result;
   }
@@ -52,6 +59,7 @@ function generatePassword() {
   // Math logic so it actually spits out a password. 
   // also, I don't think the for loop does anything
   let writePassword = "";
+  // console.log("result: " + result);
   for (let i = 0; i < passwordLength; i++) {
     writePassword += result[Math.floor(Math.random() * result.length)];
     console.log(Math.floor(Math.random() * result.length));
